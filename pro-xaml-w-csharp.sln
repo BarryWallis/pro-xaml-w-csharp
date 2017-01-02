@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Purchasing.Domain", "Chapte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Purchasing.Test", "Chapter 3\Purchasing.Test\Purchasing.Test.csproj", "{CD460E0F-1BA4-4C62-B0BB-A435B901E591}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 4", "Chapter 4", "{66F2D16F-057D-4938-8045-5DAFB065D66C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "Chapter 4\DesignPatterns\DesignPatterns.csproj", "{D6BA18A7-CCF7-4F94-8EE8-0DD6BE0621C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{CD460E0F-1BA4-4C62-B0BB-A435B901E591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD460E0F-1BA4-4C62-B0BB-A435B901E591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD460E0F-1BA4-4C62-B0BB-A435B901E591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6BA18A7-CCF7-4F94-8EE8-0DD6BE0621C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6BA18A7-CCF7-4F94-8EE8-0DD6BE0621C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6BA18A7-CCF7-4F94-8EE8-0DD6BE0621C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6BA18A7-CCF7-4F94-8EE8-0DD6BE0621C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +70,6 @@ Global
 		{2FA38666-E8E2-4A4B-85E3-E53A8C94C26B} = {31757BF8-0EA2-417A-9C0C-30C13AEE94C5}
 		{4542612C-2209-49F6-9E13-3C9A2734CAD4} = {41D18170-20E4-4E07-AC9B-827A5FF567CD}
 		{CD460E0F-1BA4-4C62-B0BB-A435B901E591} = {41D18170-20E4-4E07-AC9B-827A5FF567CD}
+		{D6BA18A7-CCF7-4F94-8EE8-0DD6BE0621C2} = {66F2D16F-057D-4938-8045-5DAFB065D66C}
 	EndGlobalSection
 EndGlobal
