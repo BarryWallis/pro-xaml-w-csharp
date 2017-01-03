@@ -11,7 +11,9 @@ namespace BasicMVVMWPF.Command
 {
     class AddNumbersCommand : ICommand
     {
+#pragma warning disable CS0067
         public event EventHandler CanExecuteChanged;
+#pragma warning restore CS0067
 
         private CalculatorViewModel viewModel = null;
 
