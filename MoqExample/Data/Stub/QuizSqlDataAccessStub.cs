@@ -9,7 +9,7 @@ using QuizIt.Domain;
 
 namespace DataAccess.Data.Stub
 {
-    class QuizSqlDataAccessStub : QuizTestBase, IQuizDataAccess
+    public class QuizSqlDataAccessStub : QuizTestBase, IQuizDataAccess
     {
         /// <summary>
         /// Get a collection containing all the quizzes in the database.
