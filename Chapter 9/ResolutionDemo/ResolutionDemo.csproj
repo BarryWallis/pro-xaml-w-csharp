@@ -110,6 +110,10 @@
     <None Include="ResolutionDemo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\star.scale-100.png" />
+    <Content Include="Images\star.scale-140.png" />
+    <Content Include="Images\star.scale-200.png" />
+    <Content Include="Images\star.scale-240.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

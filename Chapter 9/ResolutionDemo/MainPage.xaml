@@ -22,6 +22,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock x:Name="PixelResolution" />
         <TextBlock Grid.Row="1"
@@ -32,5 +33,6 @@
             <TextBlock x:Name="GridWidthDetails"
                        Text="{Binding Path=ActualWidth, ElementName=mainGrid}" />
         </StackPanel>
+        <Image Grid.Row="3" Source="Images/star.png" />
     </Grid>
 </Page>
