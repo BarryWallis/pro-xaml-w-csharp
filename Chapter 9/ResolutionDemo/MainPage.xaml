@@ -18,21 +18,7 @@
     </Page.Resources>
 
     <Grid x:Name="mainGrid">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <TextBlock x:Name="PixelResolution" />
-        <TextBlock Grid.Row="1"
-                   x:Name="DisplayResolution" />
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="2">
-            <TextBlock Text="Grid actual width: " />
-            <TextBlock x:Name="GridWidthDetails"
-                       Text="{Binding Path=ActualWidth, ElementName=mainGrid}" />
-        </StackPanel>
-        <Image Grid.Row="3" Source="Images/star.png" />
+        <Image Grid.Row="3"
+               x:Name="MyImage" />
     </Grid>
 </Page>
