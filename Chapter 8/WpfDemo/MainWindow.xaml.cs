@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfDemo.ViewModels;
 
 namespace WpfDemo
 {
@@ -20,15 +21,12 @@ namespace WpfDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int clickCount = 0;
+        private MainViewModel mainViewModel = new MainViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void AddItemButton_Click(object sender, RoutedEventArgs e)
-        {
-            Resources["TextBlockLabel"] = $"Clicked {++clickCount} time(s)";
+            DataContext = mainViewModel;
         }
     }
 }

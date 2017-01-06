@@ -1,0 +1,36 @@
+﻿<Page x:Class="ResolutionDemo.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:ResolutionDemo"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      mc:Ignorable="d">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+            <Setter Property="FontSize"
+                    Value="24" />
+            <Setter Property="Margin"
+                    Value="10" />
+        </Style>
+    </Page.Resources>
+
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="PixelResolution" />
+        <TextBlock Grid.Row="1"
+                   x:Name="DisplayResolution" />
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2">
+            <TextBlock Text="Grid actual width: " />
+            <TextBlock x:Name="GridWidthDetails"
+                       Text="{Binding Path=ActualWidth, ElementName=mainGrid}" />
+        </StackPanel>
+    </Grid>
+</Page>

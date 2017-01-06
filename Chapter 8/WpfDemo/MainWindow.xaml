@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:WpfDemo"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
+        xmlns:vm="clr-namespace:WpfDemo.ViewModels"
         Title="MainWindow"
         Height="350"
         Width="525">
     <Window.Resources>
-        <sys:String x:Key="TextBlockLabel">Not Clicked</sys:String>
+        <vm:MainViewModel x:Key="MainViewModel" />
     </Window.Resources>
-    <StackPanel>
-        <Button Content="Click Me!"
-                Name="AddItemButton"
-                Click="AddItemButton_Click" />
-        <TextBlock Text="{DynamicResource TextBlockLabel}"
-                   HorizontalAlignment="Center" />
+    <StackPanel DataContext="{StaticResource MainViewModel}">
+        <CheckBox Name="DetailsCheckBox"
+                  Content="Enter details?" />
+        <TextBox IsEnabled="{Binding ElementName=DetailsCheckBox, Path=IsChecked}"
+                   Text="{Binding StatusMessage, Mode=TwoWay}" />
+        <TextBlock Text="{Binding StatusMessage,Mode=OneWay}" />
     </StackPanel>
 </Window>
