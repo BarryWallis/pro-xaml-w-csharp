@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -7,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -50,6 +52,9 @@ namespace ListViewDemo
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
+                // Added to support SystemNavigationManager
+                rootFrame.Navigated += RootFrame_Navigated;
+
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
@@ -57,6 +62,16 @@ namespace ListViewDemo
 
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
+
+                // Added to support SystemNavigationManager
+                // Register a handler for BackRequested events and set the
+                // visibility of the Back button
+                SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
+                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                    rootFrame.CanGoBack ?
+                    AppViewBackButtonVisibility.Visible :
+                    AppViewBackButtonVisibility.Collapsed;
+
             }
 
             if (e.PrelaunchActivated == false)
@@ -71,6 +86,36 @@ namespace ListViewDemo
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+        }
+        // Added to support SystemNavigationManager`
+        private void App_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (e is null)
+                throw new ArgumentNullException(nameof(e));
+
+            Frame rootFrame = Window.Current.Content as Frame;
+            Debug.Assert(rootFrame != null);
+            if (rootFrame.CanGoBack)
+            {
+                e.Handled = true;
+                rootFrame.GoBack();
+            }
+
+        }
+
+        // Added to support SystemNavigationManager
+        private void RootFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            if (sender is null)
+                throw new ArgumentNullException(nameof(sender));
+            if (!(sender is Frame))
+                throw new ArgumentException("Must be a Frame object", nameof(sender));
+
+            // Each time a navigation event occurs, update the Back button's visibility
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                ((Frame)sender).CanGoBack ?
+                AppViewBackButtonVisibility.Visible :
+                AppViewBackButtonVisibility.Collapsed;
         }
 
         /// <summary>
