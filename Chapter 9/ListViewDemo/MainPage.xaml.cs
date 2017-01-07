@@ -35,7 +35,10 @@ namespace ListViewDemo
 
         private void CompanyListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if (CompanyListView.SelectedItem != null)
+            {
+                Frame.Navigate(typeof(DetailsPage), CompanyListView.SelectedItem);
+            }
         }
     }
 }

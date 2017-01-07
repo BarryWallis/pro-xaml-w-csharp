@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using ListViewDemo.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +23,21 @@ namespace ListViewDemo
     /// </summary>
     public sealed partial class DetailsPage : Page
     {
+        private DetailsViewModel viewModel = new DetailsViewModel();
+
         public DetailsPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e is null)
+                throw new ArgumentNullException(nameof(e));
+            if (e.Parameter is Company company)
+                viewModel.SelectedCompany = company;
+
+            DataContext = viewModel;
         }
     }
 }

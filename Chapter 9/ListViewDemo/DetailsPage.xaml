@@ -10,8 +10,56 @@
         <Style TargetType="TextBlock">
             <Setter Property="FontSize"
                     Value="{StaticResource ListViewHeaderItemThemeFontSize}" />
-        </Style>    </Page.Resources>
-    <Grid>
+        </Style>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot"
+          DataContext="{Binding SelectedCompany}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0"
+                    Margin="19, 0, 0, 0"
+                    Orientation="Horizontal">
+            <Image Source="{Binding LogoImagePath}"
+                   VerticalAlignment="Center" />
+            <TextBlock Text="{Binding Name}"
+                       VerticalAlignment="Center"
+                       Margin="10, 0"
+                       Style="{ThemeResource HeaderTextBlockStyle}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
+        </StackPanel>
+        <Grid Grid.Row="1"
+              x:Name="ContentRoot"
+              Margin="19, 30, 19, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0, 0, 10, 0"
+                       Text="Founded: " />
+            <TextBlock Grid.Row="0"
+                       Grid.Column="1"
+                       Text="{Binding YearFounded}" />
+            <TextBlock Grid.Row="1"
+                       Grid.Column="0"
+                       Margin="0, 0, 10, 0"
+                       Text="Headquarters: " />
+            <TextBlock Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Headquarters}" />
+        </Grid>
     </Grid>
 </Page>
