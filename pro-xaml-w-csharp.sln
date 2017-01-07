@@ -53,6 +53,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter 9", "Chapter 9", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResolutionDemo", "Chapter 9\ResolutionDemo\ResolutionDemo.csproj", "{E1E416D8-175B-4F58-ACBD-65393DD295A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewDemo", "Chapter 9\ListViewDemo\ListViewDemo.csproj", "{3048F68E-2A57-457E-8E39-5C58517870E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -327,6 +329,28 @@ Global
 		{E1E416D8-175B-4F58-ACBD-65393DD295A9}.Release|x86.ActiveCfg = Release|x86
 		{E1E416D8-175B-4F58-ACBD-65393DD295A9}.Release|x86.Build.0 = Release|x86
 		{E1E416D8-175B-4F58-ACBD-65393DD295A9}.Release|x86.Deploy.0 = Release|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|Any CPU.Build.0 = Debug|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|ARM.Build.0 = Debug|ARM
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|ARM.Deploy.0 = Debug|ARM
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|x64.ActiveCfg = Debug|x64
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|x64.Build.0 = Debug|x64
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|x64.Deploy.0 = Debug|x64
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|x86.ActiveCfg = Debug|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|x86.Build.0 = Debug|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Debug|x86.Deploy.0 = Debug|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|Any CPU.ActiveCfg = Release|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|ARM.ActiveCfg = Release|ARM
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|ARM.Build.0 = Release|ARM
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|ARM.Deploy.0 = Release|ARM
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|x64.ActiveCfg = Release|x64
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|x64.Build.0 = Release|x64
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|x64.Deploy.0 = Release|x64
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|x86.ActiveCfg = Release|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|x86.Build.0 = Release|x86
+		{3048F68E-2A57-457E-8E39-5C58517870E4}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -348,6 +372,7 @@ Global
 		{FCCF890E-FB96-49A4-AE9C-8640007E0945} = {F0B57A4F-CF84-4DA6-8041-2571FC1F13B2}
 		{404E75B9-6A7E-4758-A2DC-D4EAB6E3046A} = {5205BE74-C675-463C-B357-C2454E286F96}
 		{E1E416D8-175B-4F58-ACBD-65393DD295A9} = {32016C01-A4EF-4C56-9295-C157BC8C6249}
+		{3048F68E-2A57-457E-8E39-5C58517870E4} = {32016C01-A4EF-4C56-9295-C157BC8C6249}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.Logging.6.0.1304.0\lib\NET45
