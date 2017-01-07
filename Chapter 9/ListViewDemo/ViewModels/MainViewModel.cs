@@ -4,6 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.System.Profile;
+using Windows.ApplicationModel.Resources.Core;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
 
 namespace ListViewDemo.ViewModels
 {
@@ -37,6 +41,16 @@ namespace ListViewDemo.ViewModels
                 new Company {LogoImagePath = "Assets/Udemy.png", Name = "Udemy", YearFounded = 2010, Headquarters = "San Francisco, CA, USA"},
                 new Company {LogoImagePath = "Assets/YouTube.png", Name = "YouTube", YearFounded = 2005, Headquarters = "San Bruno, CA, USA"},
         };
+
+        public static Visibility VisibleIfMobile
+        {
+            get
+            {
+                IObservableMap<string, string> qualifiers = ResourceContext.GetForCurrentView().QualifierValues;
+                return (qualifiers.ContainsKey("DeviceFamily") && qualifiers["DeviceFamily"] == "Mobile") ? Visibility.Visible : Visibility.Collapsed;
+            }
+        }
+
 
         /// <summary>
         /// Create a new MainViewModel to connect the MainPage to the Company model.

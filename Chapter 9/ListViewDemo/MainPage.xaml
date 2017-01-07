@@ -16,18 +16,20 @@
         <StackPanel Grid.Row="0"
                     Margin="19,0,0,0">
             <TextBlock Text="ListView Demo"
+                       x:Name="TitleTextBlock"
                        Style="{ThemeResource TitleTextBlockStyle}"
+                       Visibility="{Binding VisibleIfMobile}"
                        Margin="0,12,0,0" />
             <TextBlock Text="Companies"
                        Margin="0,-6.5,0,26.5"
                        Style="{ThemeResource HeaderTextBlockStyle}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
-        <ListView x:Name="CompanyListView"
+        <GridView x:Name="CompanyListView"
                   ItemsSource="{Binding Companies}"
                   Grid.Row="1"
                   SelectionChanged="CompanyListView_SelectionChanged">
-            <ListView.ItemTemplate>
+            <GridView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="{Binding LogoImagePath}" />
@@ -37,7 +39,7 @@
                                    FontSize="{StaticResource TextStyleLargeFontSize}" />
                     </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </GridView.ItemTemplate>
+        </GridView>
     </Grid>
 </Page>
